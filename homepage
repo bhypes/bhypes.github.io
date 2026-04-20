@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brooke Hypes</title>
+
+  <style>
+    :root{
+      --text:#111;
+      --muted:#555;
+      --accent:#2b4c7e;
+      --accent2:#5aa6a6;
+      --soft:#f5f7fb;
+      --border:#e8e8ee;
+    }
+
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.75;
+      color: var(--text);
+      background: linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%);
+    }
+
+    /* HEADER */
+    header {
+      position: relative;
+      padding: 6rem 2rem 4rem;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(120deg, #ffffff, #f4f8ff);
+    }
+
+    .threads {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.25;
+    }
+
+    .thread {
+      fill: none;
+      stroke-width: 1.3;
+      stroke-linecap: round;
+    }
+
+    .thread.a { stroke: var(--accent); }
+    .thread.b { stroke: var(--accent2); }
+
+    .header-content {
+      position: relative;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin: 0 0 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      color: var(--muted);
+    }
+
+    /* MAIN */
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+      padding: 1.8rem;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(20,30,60,0.04);
+    }
+
+    h2 {
+      color: var(--accent);
+      margin-top: 0;
+      font-size: 1.25rem;
+    }
+
+    pre {
+      background: var(--soft);
+      padding: 1rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      overflow-x: auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <!-- Symmetrical woven "social fabric" -->
+  <svg class="threads" viewBox="0 0 1200 400" preserveAspectRatio="none">
+    <!-- horizontal weave -->
+    <path class="thread a" d="M0,80 L1200,80" />
+    <path class="thread b" d="M0,160 L1200,160" />
+    <path class="thread a" d="M0,240 L1200,240" />
+    <path class="thread b" d="M0,320 L1200,320" />
+
+    <!-- vertical weave -->
+    <path class="thread b" d="M100,0 L100,400" />
+    <path class="thread a" d="M300,0 L300,400" />
+    <path class="thread b" d="M500,0 L500,400" />
+    <path class="thread a" d="M700,0 L700,400" />
+    <path class="thread b" d="M900,0 L900,400" />
+    <path class="thread a" d="M1100,0 L1100,400" />
+  </svg>
+
+  <div class="header-content">
+    <h1>Brooke Hypes</h1>
+    <p class="subtitle">PhD Student in Planning, Governance, and Globalization | Virginia Tech</p>
+  </div>
+</header>
+
+<main>
+
+  <section>
+    <h2>This is the part where I summarize myself.</h2>
+    <pre>print("Hello, World!")</pre>
+    <p>My name is Brooke Hypes. I am currently a third-year PhD student in Planning, Governance, and Globalization at Virginia Tech. I position my work within critical governance studies with particular focus on Appalachia.</p>
+  </section>
+
+  <section>
+    <h2>What does that mean, you ask?</h2>
+    <p>Tautologically—I take a critical perspective on policy and governance.</p>
+    <p>In practice, this means I approach policy and governance as sites where power operates through knowledge claims rather than neutral technical systems.</p>
+  </section>
+
+  <section>
+    <h2>Why Appalachia?</h2>
+    <p>Appalachia matters. The region is often reduced to stereotypes of poverty and coalfields, but it is also a site of vibrant community and democratic possibility.</p>
+    <p>My work examines how governance structures shape whose knowledge is treated as credible in Appalachian communities.</p>
+  </section>
+
+  <section>
+    <h2>But who are you, really?</h2>
+    <p>I grew up near Charleston, West Virginia, spending Sundays in Fayette County with my grandparents, where food, music, and family shaped how I understand the world.</p>
+  </section>
+
+  <section>
+    <h2>Why I teach</h2>
+    <p>Teaching, for me, is about co-creation. Students are not passive recipients of knowledge but active participants in its production.</p>
+  </section>
+
+  <section>
+    <h2>What I teach</h2>
+    <p>I teach practical ethics, critical thinking, and political science courses at BridgeValley Community & Technical College and Virginia Tech.</p>
+  </section>
+
+  <section>
+    <h2>How I teach</h2>
+    <p>I emphasize dialogue, writing-as-thinking, and structured reflection, including engagement with AI as a learning tool.</p>
+  </section>
+
+  <section>
+    <h2>My Curriculum Vitae</h2>
+    <p>[PDF CV available — version/date included in file footer]</p>
+  </section>
+
+  <section>
+    <h2>My disciplinary journey</h2>
+    <p>From political science at Marshall University, to legislative oversight work, to humanities graduate study, and ultimately to doctoral work in epistemology and policy at Virginia Tech.</p>
+  </section>
+
+  <section>
+    <h2>A picture is worth a thousand words…</h2>
+  </section>
+
+</main>
+
+<footer>
+  © Brooke Hypes — Academic Portfolio Site
+</footer>
+
+</body>
+</html>
