@@ -7,181 +7,197 @@
 
   <style>
     :root{
-      --text:#111;
-      --muted:#555;
-      --accent:#2b4c7e;
-      --accent2:#5aa6a6;
-      --soft:#f5f7fb;
-      --border:#e8e8ee;
+      --navy:#061a33;
+      --navy2:#0a2a52;
+      --ink:#0b0b0b;
+      --rule:#d6e0ef;
     }
 
     body {
       margin: 0;
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.75;
-      color: var(--text);
-      background: linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%);
+      font-family: "Garamond", "Georgia", "Times New Roman", serif;
+      background: #ffffff;
+      color: var(--ink);
+      line-height: 1.9;
+      padding-top: 60px;
+    }
+
+    /* NAVIGATION */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var(--navy);
+      border-bottom: 1px solid var(--navy2);
+      z-index: 1000;
+
+      transition: opacity 0.35s ease;
+    }
+
+    nav.faded {
+      opacity: 0.78;
+    }
+
+    .nav-inner {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 0.8rem 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.3rem;
+    }
+
+    nav a {
+      color: #dbe6f5;
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 2px;
+    }
+
+    nav a:hover {
+      border-bottom: 1px solid #dbe6f5;
     }
 
     /* HEADER */
     header {
-      position: relative;
-      padding: 6rem 2rem 4rem;
-      overflow: hidden;
-      border-bottom: 1px solid var(--border);
-      background: linear-gradient(120deg, #ffffff, #f4f8ff);
-    }
-
-    .threads {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.25;
-    }
-
-    .thread {
-      fill: none;
-      stroke-width: 1.3;
-      stroke-linecap: round;
-    }
-
-    .thread.a { stroke: var(--accent); }
-    .thread.b { stroke: var(--accent2); }
-
-    .header-content {
-      position: relative;
-      max-width: 900px;
-      margin: auto;
+      padding: 5.5rem 2rem 3rem;
+      text-align: center;
+      border-bottom: 1px solid var(--rule);
     }
 
     h1 {
+      margin: 0;
       font-size: 2.8rem;
-      margin: 0 0 0.5rem;
-      letter-spacing: -0.02em;
+      font-weight: 400;
+      letter-spacing: 0.03em;
     }
 
     .subtitle {
-      color: var(--muted);
+      margin-top: 0.7rem;
+      font-size: 1rem;
+      color: #2b3f5c;
+      font-style: italic;
     }
 
-    /* MAIN */
     main {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
+      max-width: 760px;
+      margin: 3.5rem auto 6rem;
+      padding: 0 1.5rem;
     }
 
     section {
       margin-bottom: 3rem;
-      padding: 1.8rem;
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      box-shadow: 0 4px 18px rgba(20,30,60,0.04);
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--rule);
     }
 
     h2 {
-      color: var(--accent);
-      margin-top: 0;
-      font-size: 1.25rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin: 0 0 1rem;
     }
 
     pre {
-      background: var(--soft);
+      background: #f6f9ff;
+      border-left: 3px solid var(--navy);
       padding: 1rem;
-      border-radius: 10px;
-      border: 1px solid var(--border);
       overflow-x: auto;
+      font-size: 0.95rem;
     }
 
     footer {
       text-align: center;
-      padding: 3rem;
-      color: var(--muted);
+      padding: 3rem 1rem;
       font-size: 0.9rem;
+      color: #2b3f5c;
     }
   </style>
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-inner">
+    <a href="#about">About Me</a>
+    <a href="#study">What I Study</a>
+    <a href="#appalachia">Why Appalachia?</a>
+    <a href="#identity">Situated Self</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#cv">Curriculum Vitae</a>
+    <a href="#journey">Academic Journey</a>
+  </div>
+</nav>
+
 <header>
-  <!-- Symmetrical woven "social fabric" -->
-  <svg class="threads" viewBox="0 0 1200 400" preserveAspectRatio="none">
-    <!-- horizontal weave -->
-    <path class="thread a" d="M0,80 L1200,80" />
-    <path class="thread b" d="M0,160 L1200,160" />
-    <path class="thread a" d="M0,240 L1200,240" />
-    <path class="thread b" d="M0,320 L1200,320" />
-
-    <!-- vertical weave -->
-    <path class="thread b" d="M100,0 L100,400" />
-    <path class="thread a" d="M300,0 L300,400" />
-    <path class="thread b" d="M500,0 L500,400" />
-    <path class="thread a" d="M700,0 L700,400" />
-    <path class="thread b" d="M900,0 L900,400" />
-    <path class="thread a" d="M1100,0 L1100,400" />
-  </svg>
-
-  <div class="header-content">
-    <h1>Brooke Hypes</h1>
-    <p class="subtitle">PhD Student in Planning, Governance, and Globalization | Virginia Tech</p>
+  <h1>Brooke Hypes</h1>
+  <div class="subtitle">
+    PhD Student in Planning, Governance, and Globalization | Virginia Tech
   </div>
 </header>
 
 <main>
 
-  <section>
+  <section id="about">
     <h2>This is the part where I summarize myself.</h2>
     <pre>print("Hello, World!")</pre>
     <p>My name is Brooke Hypes. I am currently a third-year PhD student in Planning, Governance, and Globalization at Virginia Tech. I position my work within critical governance studies with particular focus on Appalachia.</p>
   </section>
 
-  <section>
+  <section id="study">
     <h2>What does that mean, you ask?</h2>
     <p>Tautologically—I take a critical perspective on policy and governance.</p>
-    <p>In practice, this means I approach policy and governance as sites where power operates through knowledge claims rather than neutral technical systems.</p>
+    <p>In practice, this means I approach the study of policy and governance not simply as the academic study of how and why particular decisions have been made, but as a site where power operates through knowledge claims. Rather than assuming policy expertise is neutral or purely technical, I am interested in the social and political forces that determine whose knowledge is treated as credible and whose knowledge is dismissed.</p>
+    <p>That is: whose knowledge counts?</p>
   </section>
 
-  <section>
+  <section id="appalachia">
     <h2>Why Appalachia?</h2>
-    <p>Appalachia matters. The region is often reduced to stereotypes of poverty and coalfields, but it is also a site of vibrant community and democratic possibility.</p>
-    <p>My work examines how governance structures shape whose knowledge is treated as credible in Appalachian communities.</p>
+    <p>Appalachia matters. The region is known for poverty, coalfields, and hillbilly stereotypes, but it has so much more—there are wonderful people trying to build communities and imagine a more just future together. Yet often, that work, and the needs driving it, are buried beneath dominant narratives about rural poverty and conservativism.</p>
+    <p>These narratives help make people in Appalachia the objects of policy interventions. As a result, they are often treated not as coequal, active participants in democratic life. My research interrogates this by examining how policy and governance structures are experienced by people living in Appalachian communities.</p>
+    <p>By examining whose knowledge is treated as credible—and whose is discounted altogether—I aim to make visible the epistemic injustices that shape policy outcomes in the region.</p>
+    <p>Appalachia is both a site and a lens: it grounds my work in concrete, place-based struggles while illuminating broader questions about the politics of knowledge.</p>
   </section>
 
-  <section>
+  <section id="identity">
     <h2>But who are you, really?</h2>
-    <p>I grew up near Charleston, West Virginia, spending Sundays in Fayette County with my grandparents, where food, music, and family shaped how I understand the world.</p>
+    <p>Good question. My research is deeply rooted in Appalachia because I am deeply rooted in Appalachia. I grew up near Charleston, West Virginia, and spent every Sunday with my grandparents in Fayette County, eating my grandmother’s famous homemade biscuits and playing music (or, as we called it, “making noise”) with my grandfather. My family has lived in the area since it was part of Virginia, back when it was still a colony.</p>
+    <p>I love the things the region has to offer, from summer swimming to Bridge Day to winter hiking. I love the people here, too—they made me who I am today.</p>
+    <p>Reflexivity is central to my research. I firmly believe that all knowledge is perspectival; in this view, lack of so-called “objectivity” is only a problem if it goes unexamined.</p>
   </section>
 
-  <section>
+  <section id="teaching">
     <h2>Why I teach</h2>
-    <p>Teaching, for me, is about co-creation. Students are not passive recipients of knowledge but active participants in its production.</p>
+    <p>I never thought I would find myself teaching. But now that I am, I never want to give it up.</p>
+    <p>For a long time, I thought the best teachers were those who knew everything and delivered detailed lectures from memory without a moment’s hesitation. But as I grew as a learner, I realized that was not necessarily the case. Expertise, confidence, and delivery are important—but not the most important.</p>
+    <p>Sincerity, authenticity, and humility do the most important work in the classroom. People know when you’re talking down to them, when you think you’re better than them, or when you assume they have nothing to offer. None of these things are conducive to learning.</p>
+    <p>From the very beginning, students must be embraced as co-creators of knowledge. They cannot learn to be participants in serious, important conversations if we don’t treat them as such.</p>
+    <p>In critical policy and governance studies, this is crucial. Dialogic pedagogy is not a methodological quirk—it is central to the discipline. Teaching is therefore not simply about conveying content, but about cultivating ways of thinking and being—and, ultimately, helping students develop as individuals who are prepared to participate in democratic communities.</p>
   </section>
 
-  <section>
-    <h2>What I teach</h2>
-    <p>I teach practical ethics, critical thinking, and political science courses at BridgeValley Community & Technical College and Virginia Tech.</p>
-  </section>
-
-  <section>
-    <h2>How I teach</h2>
-    <p>I emphasize dialogue, writing-as-thinking, and structured reflection, including engagement with AI as a learning tool.</p>
-  </section>
-
-  <section>
+  <section id="cv">
     <h2>My Curriculum Vitae</h2>
-    <p>[PDF CV available — version/date included in file footer]</p>
+    <p>[.pdf document of my current CV—version/date included in lower right-hand corner]</p>
   </section>
 
-  <section>
+  <section id="journey">
     <h2>My disciplinary journey</h2>
-    <p>From political science at Marshall University, to legislative oversight work, to humanities graduate study, and ultimately to doctoral work in epistemology and policy at Virginia Tech.</p>
-  </section>
-
-  <section>
-    <h2>A picture is worth a thousand words…</h2>
+    <p>If you read my CV and wonder how it all fits together, look no further.</p>
+    <p>I received my BA in Political Science from Marshall University in August 2019. In October 2019, I began working for the West Virginia Legislature as a research analyst in the Performance Evaluation and Research Division, primarily conducting performance audits. I was truly blessed to have that position and to work as an oversight professional. They do important work.</p>
+    <p>For a time, I thought I would make a career in oversight—I even began an MPA program. Ultimately, however, I realized something was missing.</p>
+    <p>Then I enrolled in the Graduate Humanities Program at Marshall University, my alma mater. It was one of the best decisions I ever made. In addition to taking fascinating classes on everything from the West as a concept to Appalachian culture, I received excellent mentoring and made close friends I still have to this day. I would not be where I am now without the Graduate Humanities Program at Marshall.</p>
+    <p>My time in the program finally helped me name what I found lacking in oversight: reflexive consideration of epistemology. Performance auditing, in many ways, was about performing and documenting objectivity—a concept I had gradually grown disillusioned with, unsure if it could truly exist as it is often conceptualized.</p>
+    <p>And so I ended up in a doctoral program at Virginia Tech, studying epistemology in policy.</p>
+    <p>The rest, as they say, is history.</p>
   </section>
 
 </main>
@@ -189,6 +205,18 @@
 <footer>
   © Brooke Hypes — Academic Portfolio Site
 </footer>
+
+<script>
+  const nav = document.querySelector("nav");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 40) {
+      nav.classList.add("faded");
+    } else {
+      nav.classList.remove("faded");
+    }
+  });
+</script>
 
 </body>
 </html>
